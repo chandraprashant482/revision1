@@ -1,0 +1,77 @@
+# Revision1 - Spring Boot Application
+
+## Overview
+This is a **Spring Boot** application for managing properties, bookings, user authentication, and reviews. It includes JWT-based authentication, AWS S3 integration for image uploads, and Twilio for SMS & WhatsApp notifications.
+
+
+## Features
+- **User Authentication** (JWT-based)
+- **Property Management** (CRUD operations)
+- **Room Availability & Booking System**
+- **Image Uploads (AWS S3)**
+- **Review System**
+- **Twilio SMS & WhatsApp Notifications**
+
+
+
+## Technologies Used
+- Spring Boot (Backend framework)
+- Spring Security & JWT (Authentication)
+- Spring Data JPA (Database interactions)
+- Maven (Build tool)
+- MySQL/PostgreSQL (Database)
+- AWS S3 (Image storage)
+- Twilio (SMS & WhatsApp notifications)
+- Lombok (For reducing boilerplate code)
+
+
+
+## Project Structure
+
+revision1/
+│── src/
+│   ├── main/java/com/revision1/
+│   │   ├── config/         # Security, JWT, AWS, Twilio configurations
+│   │   ├── controller/     # REST API controllers
+│   │   ├── entity/         # Database entity models
+│   │   ├── payload/        # DTOs for API requests/responses
+│   │   ├── repository/     # JPA repositories for database operations
+│   │   ├── service/        # Business logic services
+│   ├── main/resources/
+│   │   ├── application.properties  # App configuration
+│── pom.xml                # Maven dependencies
+│── README.md              # Project documentation
+```
+
+---
+
+
+## API Endpoints
+
+### Authentication
+| Method | Endpoint            | Description          |
+|--------|---------------------|----------------------|
+| POST   | `/api/auth/login`   | User login (JWT)    |
+| POST   | `/api/auth/signup`  | User registration   |
+
+### Properties & Bookings
+| Method | Endpoint                      | Description                  |
+|--------|--------------------------------|------------------------------|
+| GET    | `/api/properties`             | Get all properties           |
+| POST   | `/api/properties`             | Add a new property           |
+| GET    | `/api/rooms/availability`     | Check room availability      |
+| POST   | `/api/bookings`               | Make a booking               |
+
+### Reviews & Notifications
+| Method | Endpoint                | Description                   |
+|--------|--------------------------|-------------------------------|
+| POST   | `/api/reviews`           | Submit a review              |
+| POST   | `/api/sms/send`          | Send SMS via Twilio          |
+| POST   | `/api/whatsapp/send`     | Send WhatsApp message        |
+
+---
+
+
+
+### 🚀 Happy Coding! 😊
+
